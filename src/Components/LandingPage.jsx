@@ -9,11 +9,16 @@ function LandingPage() {
   const navigate = useNavigate();
 
   const handleNavigation = () => {
-    navigate("/signup"); 
+    navigate("signup"); 
   };
   return (
-    <div className={ `  h-full  ${siteMode === 'dark' ? 'bg-gradient-to-tr dark:from-[#121e26] dark:via-[#12100E] dark:to-[#113853] from-[#c6deef] via-[#e8e8ec] to-[#a9d0eb] -z-10 text-white' : 'bg-white text-black'}`}>
-      <Navbar />
+    <div
+    className={`flex flex-col h-screen ${
+      siteMode === "dark"
+        ? "bg-gradient-to-tr from-[#121e26] via-[#12100E] to-[#113853] text-white"
+        : "bg-gradient-to-tr from-[#f0f4f8] via-[#f9fafb] to-[#e6eaf2] text-black"
+    }`}
+  >
       <div className="flex flex-col items-center justify-center text-center px-4 pt-20 pb-12">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
           <span className="text-green-400">One stop</span> solution for dev's doubts
