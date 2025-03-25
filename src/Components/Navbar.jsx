@@ -123,7 +123,7 @@ function Navbar() {
               </button>
             </div>
             <nav className="flex flex-col space-y-4 p-4">
-              <Link to='/Home' className="text-lg font-medium hover:text-green-400"> Home</Link>
+              <Link to='/' className="text-lg font-medium hover:text-green-400"> Home</Link>
               <Link to="#" className="text-lg font-medium hover:text-green-400">Categories</Link>
               <Link to="#" className="text-lg font-medium hover:text-green-400">Questions</Link>
               <Link to="#" className="text-lg font-medium hover:text-green-400">Leaderboard</Link>
