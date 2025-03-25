@@ -36,7 +36,7 @@ const Signup = () => {
 
   return (
     <div
-      className={`flex flex-col h-screen ${
+      className={`flex flex-col min-h-screen ${
         siteMode === "dark"
           ? "bg-gradient-to-tr from-[#121e26] via-[#12100E] to-[#113853] text-white"
           : "bg-gradient-to-tr from-[#f0f4f8] via-[#f9fafb] to-[#e6eaf2] text-black"
@@ -45,9 +45,9 @@ const Signup = () => {
       <Navbar />
 
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center px-4 md:px-12 space-y-8 md:space-y-0 md:space-x-30">
+      <div className="container  flex flex-col md:flex-row items-center justify-center px-4 md:px-12 space-y-8 md:space-y-0 md:space-x-30">
         
-        <div className="w-full md:w-[500px]">
+        <div className="w-full md:w-[500px]  ">
           <div
             className={`p-8 md:p-12  mt-5 rounded-2xl shadow-2xl  transition-all duration-300 ${
               siteMode === "dark"
