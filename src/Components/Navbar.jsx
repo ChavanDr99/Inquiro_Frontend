@@ -65,7 +65,7 @@
 
 import React, { useState } from 'react';
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSiteMode } from './Context';
 
@@ -82,10 +82,10 @@ function Navbar() {
   };
 
   return (
-    <nav className={`w-full p-4 ${siteMode === 'dark' ? ' text-white' : 'bg-white text-black'} shadow-md`}>
+    <nav className={`w-full p-4 shadow-md transition-all duration-300 ${siteMode === 'dark' ? 'bg-gradient-to-tr from-[#1e2a36] via-[#1a252f] to-[#1f3d55] text-gray-300' : 'bg-white text-black'}`}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-green-400 text-3xl ml-2 font-bold">InQuiro</div>
-        
+
         {/* Desktop View */}
         <div className="hidden md:flex space-x-6 items-center">
           <Link to="/" className="hover:text-green-400">Home</Link>
@@ -93,7 +93,14 @@ function Navbar() {
           <Link to="#" className="hover:text-green-400">Questions</Link>
           <Link to="#" className="hover:text-green-400">Leaderboard</Link>
           <Link to="#" className="hover:text-green-400">Groups</Link>
-          <button onClick={toggleTheme} className="ml-4 text-2xl">
+
+          {/* User Dashboard Icon */}
+          <Link to="/Dash" className="text-2xl hover:text-green-400">
+            <FaUserCircle />
+          </Link>
+
+          {/* Theme Toggle Button */}
+          <button onClick={toggleTheme} className="ml-2 mr-2 text-2xl">
             {siteMode === 'light' ? <MdDarkMode /> : <MdLightMode />}
           </button>
         </div>
@@ -103,6 +110,9 @@ function Navbar() {
           <button onClick={toggleTheme} className="text-2xl">
             {siteMode === 'light' ? <MdDarkMode /> : <MdLightMode />}
           </button>
+          <Link to="/Dash" className="text-2xl hover:text-green-400">
+            <FaUserCircle />
+          </Link>
           <button onClick={toggleMenu} className="text-2xl">
             {isMenuOpen ? <FaTimes /> : <FaBars />}
           </button>
@@ -123,11 +133,14 @@ function Navbar() {
               </button>
             </div>
             <nav className="flex flex-col space-y-4 p-4">
-              <Link to='/' className="text-lg font-medium hover:text-green-400"> Home</Link>
+              <Link to="/" className="text-lg font-medium hover:text-green-400">Home</Link>
               <Link to="#" className="text-lg font-medium hover:text-green-400">Categories</Link>
               <Link to="#" className="text-lg font-medium hover:text-green-400">Questions</Link>
               <Link to="#" className="text-lg font-medium hover:text-green-400">Leaderboard</Link>
               <Link to="#" className="text-lg font-medium hover:text-green-400">Groups</Link>
+              <Link to="/Dash" className="text-2xl hover:text-green-400">
+            <FaUserCircle />
+          </Link>
             </nav>
           </div>
         </div>
