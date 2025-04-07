@@ -69,7 +69,7 @@ const Dashboard = () => {
 
   return (
     <div
-      className={`flex flex-col py-[3.7%] px-5 transition-all duration-300 ${
+      className={`flex flex-col py-[3.7%] min-h-screen px-5 transition-all duration-300 ${
         siteMode === "dark"
           ? "bg-gradient-to-tr from-[#1e2a36] via-[#1a252f] to-[#1f3d55] text-gray-300"
           : "bg-[#f8fafc] text-black"
