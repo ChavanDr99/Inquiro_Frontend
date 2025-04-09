@@ -82,20 +82,20 @@ function Navbar() {
   };
 
   return (
-    <nav className={`w-full p-4 shadow-md transition-all duration-300 ${siteMode === 'dark' ? 'bg-gradient-to-tr from-[#1e2a36] via-[#1a252f] to-[#1f3d55] text-gray-300' : 'bg-white text-black'}`}>
+    <nav className={`bg-[#111111] px-7 pt-6 pb-6 w-full p-4 shadow-md transition-all duration-300 fixed ${siteMode === 'dark' ? 'bg-dark text-white shadow-stone-950' : 'bg-white text-black shadow-gray-300'}`}>
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-green-400 text-3xl ml-2 font-bold">InQuiro</div>
+        <div className="text-[#7BF91A] text-3xl ml-2 font-bold">InQuiro</div>
 
         {/* Desktop View */}
         <div className="hidden md:flex space-x-6 items-center">
-          <Link to="/" className="hover:text-green-400">Home</Link>
-          <Link to="#" className="hover:text-green-400">Categories</Link>
-          <Link to="#" className="hover:text-green-400">Questions</Link>
-          <Link to="#" className="hover:text-green-400">Leaderboard</Link>
-          <Link to="#" className="hover:text-green-400">Groups</Link>
+          <Link to="/" className="hover:text-[#7BF91A]">Home</Link>
+          <Link to="#" className="hover:text-[#7BF91A]">Categories</Link>
+          <Link to="#" className="hover:text-[#7BF91A]">Questions</Link>
+          <Link to="#" className="hover:text-[#7BF91A]">Leaderboard</Link>
+          <Link to="#" className="hover:text-[#7BF91A]">Groups</Link>
 
           {/* User Dashboard Icon */}
-          <Link to="/Dash" className="text-2xl hover:text-green-400">
+          <Link to="/Dash" className="text-2xl hover:text-[#7BF91A]">
             <FaUserCircle />
           </Link>
 
@@ -110,7 +110,7 @@ function Navbar() {
           <button onClick={toggleTheme} className="text-2xl">
             {siteMode === 'light' ? <MdDarkMode /> : <MdLightMode />}
           </button>
-          <Link to="/Dash" className="text-2xl hover:text-green-400">
+          <Link to="/Dash" className="text-2xl hover:text-[#7BF91A]">
             <FaUserCircle />
           </Link>
           <button onClick={toggleMenu} className="text-2xl">

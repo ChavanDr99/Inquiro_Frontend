@@ -7,9 +7,9 @@ function Footer() {
 
   return (
     <footer
-      className={`w-full py-6 px-4 md:px-12  transition-all duration-300 ${
+      className={`w-full py-15 px-4 md:px-12 transition-all duration-300 ${
         siteMode === "dark"
-          ? "bg-[#0D1B2A] text-white "
+          ? "bg-[#1B1B1B] text-white "
           : "bg-[#f8fafc] text-black bg-gray-200 "
       }`}
     >

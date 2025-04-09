@@ -25,26 +25,27 @@ function LandingPage() {
     <div
       className={`flex flex-col min-h-screen ${
         siteMode === "dark"
-          ? "bg-gradient-to-tr from-[#121e26] via-[#12100E] to-[#113853] text-gray-200"
+          // ? "bg-gradient-to-tr from-[#121e26] via-[#12100E] to-[#113853] text-gray-200"
+          ? "bg-[#111111] text-gray-100"
           : "bg-gradient-to-tr from-[#f0f4f8] via-[#f9fafb] to-[#e6eaf2] text-black"
       }`}
     >
       <Navbar />
       
       {/* Hero Section */}
-      <div className="flex flex-col items-center justify-center text-center px-4 pt-20 pb-12">
+      <div className="bg-[url('./assets/img/astronaut-bg.png')] bg-no-repeat bg-center bg-auto flex flex-col items-center justify-center text-center h-[110vh]">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          <span className="text-green-500">One stop</span> solution for dev's doubts
+          <span className="text-[#7BF91A]">One stop</span> solution for dev's doubts
         </h2>
         <p className="max-w-2xl mb-8">
           Inquiro helps programmers and developers at any point of the learning curve to 
           easily understand and tackle their problems with a skilled community.
         </p>
         <div className="flex space-x-4">
-          <button className={`py-2 px-6 rounded-md cursor-pointer font-medium ${siteMode === 'dark' ? 'bg-white text-black' : 'bg-black text-white'}`}>
+          <button className={`py-2 px-6 rounded-md cursor-pointer border font-medium hover:bg-transparent ${siteMode === 'dark' ? 'bg-white text-black border-white hover:text-white' : 'bg-black text-white border-black hover:text-black'}`}>
             Get Started
           </button>
-          <button onClick={handleNavigation} className={`py-2 px-6 cursor-pointer rounded-md font-medium ${siteMode === 'dark' ? 'bg-transparent border border-white text-white' : 'bg-transparent border border-black text-black'}`}>
+          <button onClick={handleNavigation} className={`py-2 px-6 cursor-pointer rounded-md font-medium ${siteMode === 'dark' ? 'bg-transparent border border-white text-white hover:bg-white hover:text-black' : 'bg-transparent border border-black text-black hover:bg-black hover:text-white'}`}>
             Sign into Account
           </button>
         </div>
@@ -53,7 +54,7 @@ function LandingPage() {
       {/* Features Section */}
       <div className="px-4 py-12 max-w-6xl mx-auto">
         <h3 className="text-2xl font-bold text-center mb-12">
-          What is InQuiro? <span className="text-gray-500 font-normal text-lg">Your everyday doubt-solving community</span>
+          What is InQuiro? <span className="text-[#737373] font-normal text-lg">Your everyday doubt-solving community</span>
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -62,15 +63,26 @@ function LandingPage() {
               key={index}
               className={`rounded-lg p-6 shadow-lg transition-all duration-300 ${
                 siteMode === 'dark' 
-                  ? 'bg-gradient-to-r from-[#1e293b] to-[#0f172a] border border-gray-700 shadow-gray-900' 
-                  : 'bg-gradient-to-r from-[#ffffff] to-[#f3f4f6] border border-gray-300 shadow-gray-500'
+                  ? 'bg-[#1B1B1B] shadow-stone-950 border border-[#1B1B1B] hover:bg-[#111111] hover:border-[#7BF91A]' 
+                  : 'bg-gradient-to-r from-[#ffffff] to-[#f3f4f6] border-2 border-white shadow-gray-500 hover:border-[#7BF91A]'
               }`}
             >
               <h4 className="text-xl font-bold mb-3">{feature.title}</h4>
-              <p className="text-gray-500">{feature.description}</p>
+              <p className="text-[#737373]">{feature.description}</p>
             </div>
           ))}
         </div>
+      </div>
+
+      <hr className="mx-80 mt-10"></hr>
+
+      {/* Contact Us */}
+      <div className="px-4 py-12 max-w-6xl mx-auto">
+        <h3 className="text-2xl font-bold text-center mb-12">
+          Connect with us 
+          <br></br>
+          <span className="text-[#737373] font-normal text-lg">Report a bug / suggest improvements and more features</span>
+        </h3>
       </div>
 
       <Footer />
