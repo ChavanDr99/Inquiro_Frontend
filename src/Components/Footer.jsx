@@ -28,7 +28,7 @@ function Footer() {
               href="#"
               className={`p-2 rounded-full transition-all ${
                 siteMode === "dark"
-                  ? "bg-gray-700 hover:bg-green-400"
+                  ? "bg-[#111111] hover:bg-green-500"
                   : "bg-gray-300 hover:bg-green-500"
               }`}
             >

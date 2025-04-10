@@ -84,18 +84,18 @@ function Navbar() {
   return (
     <nav className={`bg-[#111111] px-7 pt-6 pb-6 w-full p-4 shadow-md transition-all duration-300 fixed ${siteMode === 'dark' ? 'bg-dark text-white shadow-stone-950' : 'bg-white text-black shadow-gray-300'}`}>
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-[#7BF91A] text-3xl ml-2 font-bold">InQuiro</div>
+        <div className="text-green-500 text-3xl ml-2 font-bold">InQuiro</div>
 
         {/* Desktop View */}
         <div className="hidden md:flex space-x-6 items-center">
-          <Link to="/" className="hover:text-[#7BF91A]">Home</Link>
-          <Link to="#" className="hover:text-[#7BF91A]">Categories</Link>
-          <Link to="#" className="hover:text-[#7BF91A]">Questions</Link>
-          <Link to="#" className="hover:text-[#7BF91A]">Leaderboard</Link>
-          <Link to="#" className="hover:text-[#7BF91A]">Groups</Link>
+          <Link to="/" className="hover:text-green-500">Home</Link>
+          <Link to="#" className="hover:text-green-500">Categories</Link>
+          <Link to="#" className="hover:text-green-500">Questions</Link>
+          <Link to="#" className="hover:text-green-500">Leaderboard</Link>
+          <Link to="#" className="hover:text-green-500">Groups</Link>
 
           {/* User Dashboard Icon */}
-          <Link to="/Dash" className="text-2xl hover:text-[#7BF91A]">
+          <Link to="/Dash" className="text-2xl hover:text-green-500">
             <FaUserCircle />
           </Link>
 
