@@ -178,7 +178,7 @@ const Signup = () => {
           </div>
         </div>
 
-        <div className="hidden md:block w-[500px]">
+        <div className="hidden md:block w-[500px] signup-login">
           <Lottie
             animationData={loginAnimation}
             className="w-full h-full transform transition-all duration-300 hover:scale-[1.05]"

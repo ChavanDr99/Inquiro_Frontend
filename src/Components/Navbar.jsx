@@ -82,7 +82,7 @@ function Navbar() {
   };
 
   return (
-    <nav className={`bg-[#111111] px-7 pt-6 pb-6 w-full p-4 shadow-md transition-all duration-300 fixed ${siteMode === 'dark' ? 'bg-dark text-white shadow-stone-950' : 'bg-white text-black shadow-gray-300'}`}>
+    <nav className={`bg-[#111111]/75 backdrop-blur-md px-7 pt-6 pb-6 w-full p-4 shadow-md transition-all duration-300 fixed ${siteMode === 'dark' ? 'bg-dark text-white shadow-stone-950' : 'bg-white text-black shadow-gray-300'}`}>
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-green-500 text-3xl ml-2 font-bold">InQuiro</div>
 
