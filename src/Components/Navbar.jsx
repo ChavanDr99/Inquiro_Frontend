@@ -90,7 +90,7 @@ function Navbar() {
         <div className="hidden md:flex space-x-6 items-center">
           <Link to="/" className="hover:text-green-500">Home</Link>
           <Link to="#" className="hover:text-green-500">Categories</Link>
-          <Link to="#" className="hover:text-green-500">Questions</Link>
+          <Link to="/questions" className="hover:text-green-500">Questions</Link>
           <Link to="#" className="hover:text-green-500">Leaderboard</Link>
           <Link to="#" className="hover:text-green-500">Groups</Link>
 
@@ -135,7 +135,7 @@ function Navbar() {
             <nav className="flex flex-col space-y-4 p-4">
               <Link to="/" className="text-lg font-medium hover:text-green-400">Home</Link>
               <Link to="#" className="text-lg font-medium hover:text-green-400">Categories</Link>
-              <Link to="#" className="text-lg font-medium hover:text-green-400">Questions</Link>
+              <Link to="/questions" className="text-lg font-medium hover:text-green-400">Questions</Link>
               <Link to="#" className="text-lg font-medium hover:text-green-400">Leaderboard</Link>
               <Link to="#" className="text-lg font-medium hover:text-green-400">Groups</Link>
               <Link to="/Dash" className="text-2xl hover:text-green-400">
