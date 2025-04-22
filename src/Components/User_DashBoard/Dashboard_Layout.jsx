@@ -8,16 +8,14 @@ const DashboardLayout = () => {
 
   return (
     <div className="flex h-screen">
-      
       {/* Sidebar */}
-      <Sidebar 
-        isOpen={sidebarOpen} 
-        toggleSidebar={() => setSidebarOpen(!sidebarOpen)} 
+      <Sidebar
+        isOpen={sidebarOpen}
+        toggleSidebar={() => setSidebarOpen(!sidebarOpen)}
       />
 
       {/* Main Content Area */}
-      <div className="flex flex-col flex-grow">
-        
+      <div className="flex flex-col flex-grow  ">
         {/* Navbar - Always Full Width */}
         <Navbar />
 

@@ -32,19 +32,23 @@ const Login = () => {
     <div
       className={`flex flex-col h-screen ${
         siteMode === "dark"
-          ? "bg-gradient-to-tr from-[#121e26] via-[#12100E] to-[#113853] text-white"
-          : "bg-gradient-to-tr from-[#f0f4f8] via-[#f9fafb] to-[#e6eaf2] text-black"
+          // ? "bg-gradient-to-tr from-[#121e26] via-[#12100E] to-[#113853] text-white"
+          // : "bg-gradient-to-tr from-[#f0f4f8] via-[#f9fafb] to-[#e6eaf2] text-black"
+          ? "bg-[#111111] text-white"
+          : "bg-white text-black"
       }`}
     >
       <Navbar />
 
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-center px-4 md:px-12 space-y-8 md:space-y-0 md:space-x-30">
+      <div className="container mx-auto my-auto flex flex-col md:flex-row items-center justify-center px-4 md:px-12 space-y-8 md:space-y-0 md:space-x-30">
         
         <div className="w-full md:w-[500px]">
           <div
-            className={`p-8 md:p-12 mt-[20%] rounded-2xl shadow-2xl  transition-all duration-300 ${
+            className={`p-8 md:p-12 mt-[20%] rounded-2xl transition-all duration-300 ${
               siteMode === "dark"
-                ? "bg-gradient-to-tr dark:from-[#121e40] dark:via-[#12110E] dark:to-[#113753]"
+                // ? "bg-gradient-to-tr dark:from-[#121e40] dark:via-[#12110E] dark:to-[#113753]"
+                // : "bg-white border-gray-300"
+                ? "bg-[#111111]"
                 : "bg-white border-gray-300"
             }`}
           >
@@ -56,7 +60,7 @@ const Login = () => {
       
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Mail className="text-gray-400" />
+                  <Mail className="text-gray-500" />
                 </div>
                 <input
                   type="email"
@@ -64,17 +68,17 @@ const Login = () => {
                   placeholder="Email"
                   value={formData.email}
                   onChange={handleInputChange}
-                  className={`w-full pl-10 pr-4 py-3 border placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                  className={`w-full pl-10 pr-4 py-3 placeholder-gray-500 rounded-lg hover:ring-2 hover:ring-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 ${
                     siteMode === "dark"
-                      ? "bg-[#2c3e50] text-white border-gray-700"
-                      : "border-gray-300"
+                      ? "bg-[#1B1B1B] text-white border-gray-700"
+                      : "bg-gray-200 border-gray-300"
                   }`}
                   required
                 />
               </div>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <Lock className="text-gray-400" />
+                  <Lock className="text-gray-500" />
                 </div>
                 <input
                   type="password"
@@ -82,10 +86,10 @@ const Login = () => {
                   placeholder="Password"
                   value={formData.password}
                   onChange={handleInputChange}
-                  className={`w-full pl-10 pr-4 py-3 border placeholder-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 ${
+                  className={`w-full pl-10 pr-4 py-3 placeholder-gray-500 rounded-lg hover:ring-2 hover:ring-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 ${
                     siteMode === "dark"
-                      ? "bg-[#2c3e50] text-white border-gray-700"
-                      : "border-gray-300"
+                      ? "bg-[#1B1B1B] text-white border-gray-700"
+                      : "bg-gray-200 border-gray-300"
                   }`}
                   required
                 />
@@ -93,7 +97,11 @@ const Login = () => {
 
               <button
                 type="submit"
-                className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
+                className={`w-full bg-green-500 font-bold py-3 rounded-full transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-green-500 focus:text-green-500 hover:ring-2 hover:ring-green-500 hover:text-green-500 ${
+                  siteMode === "dark"
+                    ? "focus:bg-[#1B1B1B] text-black hover:bg-[#1B1B1B]"
+                    : "focus:bg-white text-white hover:bg-white"
+                }`}
               >
                 Log In
               </button>
@@ -106,7 +114,11 @@ const Login = () => {
             </div>
 
             <button
-              className="w-full flex items-center placeholder-gray-400 justify-center border rounded-lg py-3 text-gray-700 dark:text-white dark:border-gray-700 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
+              className={`w-full flex items-center placeholder-gray-400 justify-center cursor-pointer rounded-full py-3 text-gray-700 transition-colors duration-300 hover:ring-2 hover:ring-green-500 focus:ring-2 focus:ring-green-500 ${
+                siteMode === "dark"
+                  ? "bg-[#1B1B1B] text-white border-gray-700"
+                  : "bg-gray-200 text-black border-gray-700"
+              }`}
             >
               <FcGoogle className="text-xl mr-3" />
               Continue with Google
